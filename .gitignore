@@ -1,0 +1,9 @@
+venv/
+__pycache__/
+ultralytics-src/
+data/
+runs/
+outputs/runs/
+outputs/predictions.json
+*.pt
+.DS_Store

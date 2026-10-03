@@ -1,0 +1,95 @@
+[
+  {
+    "name": "zeroshot",
+    "label": "YOLOv8n pretrained, no fine-tuning (reference)",
+    "map50": 0.4804955139248706,
+    "map50_95": 0.3514007186015313,
+    "precision": 0.6166676026920476,
+    "recall": 0.42734143786337314,
+    "f1": 0.5048378122817408,
+    "settings": {
+      "imgsz": 416,
+      "note": "no training"
+    }
+  },
+  {
+    "name": "baseline",
+    "label": "YOLOv8n (from scratch)",
+    "map50": 0.0005402643786374383,
+    "map50_95": 0.00019400243505703302,
+    "precision": 0.0009408057361172167,
+    "recall": 0.013630798390012099,
+    "f1": 0.0017601265038741005,
+    "params_total": 3157200,
+    "params_trainable": 3157200,
+    "train_minutes": 17.1,
+    "settings": {
+      "epochs": 20,
+      "imgsz": 416,
+      "batch": 16,
+      "seed": 0,
+      "fraction": 1.0,
+      "device": "cpu"
+    }
+  },
+  {
+    "name": "dino",
+    "label": "YOLOv8n + DINOv2 (from scratch)",
+    "map50": 0.0016957554422889088,
+    "map50_95": 0.00044848346305157035,
+    "precision": 0.0019067239515706243,
+    "recall": 0.017457725700229625,
+    "f1": 0.003437956082524998,
+    "params_total": 25410640,
+    "params_trainable": 3354064,
+    "train_minutes": 46.5,
+    "settings": {
+      "epochs": 20,
+      "imgsz": 416,
+      "batch": 16,
+      "seed": 0,
+      "fraction": 1.0,
+      "device": "cpu"
+    }
+  },
+  {
+    "name": "pretrained",
+    "label": "YOLOv8n pretrained (fine-tuned)",
+    "map50": 0.4688792340658196,
+    "map50_95": 0.3410740444496304,
+    "precision": 0.6288957127165755,
+    "recall": 0.4245491072044228,
+    "f1": 0.5069028928891299,
+    "params_total": 3157200,
+    "params_trainable": 3157200,
+    "train_minutes": 22.9,
+    "settings": {
+      "epochs": 20,
+      "imgsz": 416,
+      "batch": 16,
+      "seed": 0,
+      "fraction": 1.0,
+      "device": "cpu"
+    }
+  },
+  {
+    "name": "dino_pretrained",
+    "label": "YOLOv8n-pretrained + DINOv2 (fine-tuned)",
+    "map50": 0.15310052944986555,
+    "map50_95": 0.09230609638776748,
+    "precision": 0.35718142034556366,
+    "recall": 0.16212668227296384,
+    "f1": 0.22302228044652547,
+    "params_total": 25410640,
+    "params_trainable": 3354064,
+    "train_minutes": 24.2,
+    "settings": {
+      "epochs": 20,
+      "imgsz": 416,
+      "batch": 16,
+      "seed": 0,
+      "fraction": 1.0,
+      "device": "cpu"
+    }
+  }
+]
